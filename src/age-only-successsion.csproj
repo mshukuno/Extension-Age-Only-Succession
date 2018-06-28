@@ -3,10 +3,11 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Landis.Extension.Succession.AgeOnly</RootNamespace>
-    <AssemblyName>Landis.Extension.Succession.AgeOnly</AssemblyName>
-    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyName>Landis.Extension.Succession.AgeOnly-v5</AssemblyName>
+    <AssemblyTitle>Landis.Extension.Succession.AgeOnly-v5</AssemblyTitle>
+    <AssemblyVersion>5.0.0.0</AssemblyVersion>
     <Description>Age Only Succession</Description>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageLicenseUrl>https://github.com/LANDIS-II-Foundation/Extension-Age-Only-Succession/blob/master/LICENSE</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/LANDIS-II-Foundation/Extension-Age-Only-Succession</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
@@ -15,15 +16,24 @@
     <Product>LANDIS-II Landscape Change Model</Product>
     <PackageTags>LANDIS-II;Landis;Extension;Age only succession</PackageTags>
     <NeutralLanguage>English</NeutralLanguage>
+    <Version>0</Version>
+    <FileVersion>7.0.0.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Landis.Core" Version="1.0.0" />
-    <PackageReference Include="Landis.Library.AgeOnlyCohorts" Version="1.0.0" />
-    <PackageReference Include="Landis.Library.Cohorts" Version="1.0.0" />
-    <PackageReference Include="Landis.Library.Succession-v5" Version="1.0.0" />
-    <PackageReference Include="Landis.SpatialModeling" Version="1.0.0" />
-    <PackageReference Include="Landis.Utilities" Version="1.0.0" />
+    <PackageReference Include="Landis.Core" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Landis.Library.AgeOnlyCohorts-v3">
+      <HintPath>lib\Landis.Library.AgeOnlyCohorts-v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Landis.Library.Cohorts-v2">
+      <HintPath>lib\Landis.Library.Cohorts-v2.dll</HintPath>
+    </Reference>
+    <Reference Include="Landis.Library.Succession-v6">
+      <HintPath>lib\Landis.Library.Succession-v6.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
