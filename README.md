@@ -221,13 +221,13 @@ Notes:
 
 <br><br> 
 ## Creating an installer
-```
+
 1. Change `Configuration` from `Debug` to `Release` in Visual Studio and `Build` the extension application.  DLLs are created in **_src\bin\Release\netstandard2.0_** folder.
 2. Go to  **_.\deploy_** folder.
 3. Edit text file name and information.
 4. Open `.iss` file.
 4. Edit extension information and compile.
-```
+
 
 
 
