@@ -195,6 +195,8 @@ LANDIS-II 6.1 (official release)
 <br><br>
 
 # Getting started on Windows 10
+<br>
+
 ## Prerequisites for LANDIS-II-v7 Extension development
  
 * Visual Studio 2017 with installation of
@@ -207,7 +209,7 @@ LANDIS-II 6.1 (official release)
 
 ## Setting up developing environment
 #### Downloading the project <br> 
-   ```git clone <download url> ``` <br><br>
+   ```git clone <download url> ``` <br>
 
 #### Importing LANDIS-II dependencies <br> 
 1. Open Windows PowerShell
@@ -219,7 +221,8 @@ Notes:
   * LANDIS-II Core libralies are on [MyGet **_landis-ii-v7_** feed](https://www.myget.org/feed/Packages/landis-ii-v7)
   * LANDIS-II Support libraries are on [GitHub LANDIS-II-Foundation repository](https://github.com/LANDIS-II-Foundation/Support-Library-Dlls-v7)
 
-<br><br> 
+<br>
+
 ## Creating an installer
 
 1. Change `Configuration` from `Debug` to `Release` in Visual Studio and `Build` the extension application.  DLLs are created in **_src\bin\Release\netstandard2.0_** folder.
