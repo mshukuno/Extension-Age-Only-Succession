@@ -1,0 +1,9 @@
+LandisData   Extension
+
+Name         "Age-only Succession"
+Version      5.0
+Type         succession
+Assembly     Landis.Extension.Succession.AgeOnly
+Class        Landis.Extension.Succession.AgeOnly.PlugIn
+Description  "Succession with age cohorts"
+CoreVersion  7.0

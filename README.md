@@ -203,6 +203,7 @@ LANDIS-II 6.1 (official release)
   * .NET Core cross-platform development
   * NuGet Package Project for Visual Studio 2017
   * GitHub Extension for Visual Studio (optional)
+  * PowerShell Tools for Visual Studio 2017 (optional)
 * Inno Setup - required for creating a Windows installer
   * Install latest version from http://jrsoftware.org/isdl.php
 <br><br>
