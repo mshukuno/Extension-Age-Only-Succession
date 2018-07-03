@@ -207,4 +207,4 @@ FakesAssemblies/
 *.opt
 
 # LANDIS-II	
-/lib/*.dll
+*.dll
