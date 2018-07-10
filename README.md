@@ -5,8 +5,6 @@ Changes to this extension are governed by the [**Repository Rules**](https://sit
 Robert Scheller is the Custodian of this repository.
 
  <br><br>
-
-
 # About
 
 **Project:** LANDIS-II Landscape Change Model <br>
@@ -27,7 +25,6 @@ Extension-Age-Only-Succession defines cohort succession as a function of cohort 
 <br><br>
 
 # The Science and the Model
-
 
 The science powering the LANDIS-II model ultimately resides in .cs files, written in 
 the C# programming language. The collection of .cs files associated with the LANDIS-II 
@@ -63,21 +60,11 @@ The process looks like this:
 <br><br>
 # Preliminary notes for building a new or modified extension from source code
 
-
 * It is recommended that you use Git for version control and change tracking. This means cloning the Extension-Base-Harvest repository to your local machine. Help with Git functionality can be found in the ProGit Manual (freely available) as a .pdf (https://git-scm.com/book/). A very straighforward Windows/Git interface is "git BASH" (available at https://git-for-windows.github.io/)
 
 * Should you want the LANDiS-II Foundation to consider your changes for inclusion in the LANDIS-II Foundation's main GitHub repository https://github.com/LANDIS-II-Foundation/) you will need to submit a Pull request.
 
-* Visual Studio (VS) may mark references to some libraries as "unavailable" until the solution is actually (re)built. During the build process, VS will automatically retrieve any requisite libraries (assmeblies) from the Support-Library-Dlls repository, located at https://github.com/LANDIS-II-Foundation/Support-Library-Dlls-v7.  Retrieval of requisite libraries is done by running the script, ~~"install-libs.cmd" as a pre-build event.~~ 
-
-* ~~Libraries such as "System" and "System.Core" are assemblies that should be available on your machine as part of the .Net Framework. For example, examining "System" and "System.Core" in References (Solution Explorer ==> References) yields the following output in an Object Browser window in VS,~~
-
-  * ~~Assembly System
-    C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll~~
-
-  * ~~Assembly System.Core
-    C:\Program Files (x86) \ReferenceAssemblies\Microsoft\Framework\v3.5\System.Core.dll~~
-
+* Visual Studio (VS) may mark references to some libraries as "unavailable" until the solution is actually (re)built. During the build process, VS will automatically retrieve any requisite libraries (assmeblies) from the Support-Library-Dlls repository, located at https://github.com/LANDIS-II-Foundation/Support-Library-Dlls-v7.  Retrieval of requisite libraries is done by running the script, 
 <br><br>
 
 # Step-by-step instructions for building a new or modified extension from source code
@@ -108,89 +95,6 @@ $ git remote -v
 origin  https://github.com/LANDIS-II-Foundation/Extension-Base-Harvest.git (fetch)
 origin  https://github.com/LANDIS-II-Foundation/Extension-Base-Harvest.git (push)
 
-
-==== STEP2. Setup Visual Studio (VS)  ==================================================
-
-	a. Open VS and load the "base-harvest.csproj" file
-Project ==> Open ==> Project/Solution
-
-
-
-	b. Select the 'Solution Explorer' tab to see .cs files, References 
-Solution 'base harvest' (1 project)
-  C# base-harvest
-    Prperties
-    References
-    EventsLog.cs
-    InputParametersParser.cs
-    MetadataHandler.cs
-    packages.config
-    PlugIn.cs
-    SummaryLog.cs
-
-
-
-	c. VS has added three (3) directories to your LOCAL repo:
-
-
-...src\.vs\
-...src\bin\		
-...src\obj\
-
-
-===== STEP3. (Re)build the project ==========================================================
-
-	a. Under the "Build" tab, select "Build base-harvest"
-
-	b. If the VS build is successful, two new files will have been created:
-
-Landis.Extension.BaseHarvest-3.0.dll	#the functional extension to be used by the LANDIS-II
-					Core-Model
-
-Landis.Extension.BaseHarvest-3.0.pdb	#a program database(.pdb) file for storing debugging 
-					information about the .dll; created from source files 
-					during compilation and not needed by LANDIS-II
-
-
-	b1. Note that "... \Extension-Base-Harvest\src\obj\Debug" has a text file listing the 
-files created by the (re)build (see <name>.csproj.FileListAbsolute.txt)
-
-
-	b2.  Note that "... \Extension-Base-Harvest\src\bin\Debug" is now populated with various 
-reference libraries required for the (re)build. A copy of the newly built, 
-"Landis.Extension.BaseHarvest-3.0.dll" library is also found here.
-
-
-
-<br><br>
-# Testing the (re)built extension (ie, "Landis.Extension.BaseHarvest-3.0.dll")
-
-
-==== STEP1. remove the currently installed BaseHarvest extension and re-install =============================================== 
-
-	a. Use the Windows 'Control Panel' to uninstall the current version of LANDIS-II Base Harvest
- 
-	b. Open 'Base Harvest v3.0.iss' in Inno Script Studio (https://www.kymoto.org/products/inno-script-studio)
-
-	c. Compile (CTRL-F9) 'Base Harvest v3.0.iss' to produce an installer, 'LANDIS-II Base Harvest 3.0-setup.exe'
-
-	d. Run the new installer 
-
-
-===== STEP2. Perform a test run ===========================================================
-
-	a. With LANDIS-II already installed, run LANDIS-II with the Base Harvest example provided with 
-	   Extension-Base-Harvest (found in the folder, \Extension-Base-Harvest\deploy\examples OR 
-	   after installation, found in the folder, \Program Files\LANDIS-II\v6\examples\Base Harvest)
-
-	b. Open a command prompt (as administrator) and enter the following command at the command line, 
-call landis-ii scenario_s1e1.txt
-
-	c. The following console (screen) output, somewhat truncated from the actual output,
-	   is expected:
-
-C:\Program Files\LANDIS-II\v6\examples\Base Harvest>call landis-ii scenario_s1e1.txt
-LANDIS-II 6.1 (official release)
 
 <br><br>
 
