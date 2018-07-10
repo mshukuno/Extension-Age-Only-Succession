@@ -105,22 +105,22 @@ origin  https://github.com/LANDIS-II-Foundation/Extension-Base-Harvest.git (push
  
 * Visual Studio 2017 with installation of
   * .NET Core cross-platform development
-  * NuGet Package Project for Visual Studio 2017
   * GitHub Extension for Visual Studio (optional)
-  * PowerShell Tools for Visual Studio 2017 (optional)
 * Inno Setup - required for creating a Windows installer
   * Install latest version from http://jrsoftware.org/isdl.php
 <br><br>
 
 ## Setting up developing environment
 #### Downloading the project <br> 
-   ```git clone <download url> ``` <br>
+   ```git clone  https://github.com/LANDIS-II-Foundation/Extension-Base-Harvest.git ``` <br>
 
 #### Importing LANDIS-II dependencies <br> 
-1. Open Windows PowerShell
-2. ```cd <LANDIS-II Extensin folder>\src\lib``` <br>
-3. Then type `su` and press `Tab` key. It will find **_support_libs_download.ps1_** file. <br>
-4. Hit `Enter`
+1. Open .csproj file in src folder with Visual Studio 2017.
+2. In the Solution Explorer find **_/lib/support_libs_download.ps1_** file.
+3. Right click the file name and click **Open with PowerShell ISE**
+4. Click Run Script (breen arrow) button or press F5 key.  The script download dependencies from GitHub.
+5. Close PowerShell ISE.
+6. Build the application
 
 Notes:
   * LANDIS-II Core libralies are on [MyGet **_landis-ii-v7_** feed](https://www.myget.org/feed/Packages/landis-ii-v7)
