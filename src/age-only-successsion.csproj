@@ -23,6 +23,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Model.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Landis.Core" Version="2.0.0" />
   </ItemGroup>
 
